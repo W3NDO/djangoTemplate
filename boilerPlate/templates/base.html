@@ -1,0 +1,45 @@
+	{% load static %} <!--important-->
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="{% static 'css/base.css' %}">
+	<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	<meta content="width=device-width, initial-scale=1" name="viewport" />
+	<meta name='theme-color' content='#20b2aa'>
+	<title>Boiler Plate</title>
+</head>
+<body>
+	<nav class = "navBar">
+		<button onclick='toggleMenu()'> <i class="fas fa-bars"></i> </button>
+		<ul class = "links" id='links'>
+			<li><a href="{% url 'home' %}">HOME</a></li>
+		</ul>
+	</nav>
+	<hr>
+	<h1>TEMPLATE FOR DJANGO</h1>
+	{% block content %}
+
+	{% endblock content %}
+
+	<hr>
+	<footer>
+		<ul class="socials">
+			<li><a href="" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+			<li><a href="" target="_blank"><i class="fab fa-instagram"></i></a></li>
+			<li><a href="" target="_blank"><i class="fab fa-twitter"></i></a></li>
+			<li><a href="" target="_blank"><i class="fab fa-youtube"></i></a></li>
+		</ul>
+	</footer>
+</body>
+<script type="text/javascript">
+	var x = document.getElementById('links');
+	function toggleMenu(){
+		if (x.style.display === 'block'){
+			x.style.display = 'none';
+		} else{
+			x.style.display = 'block'
+		}
+	}
+</script>
+</html>
